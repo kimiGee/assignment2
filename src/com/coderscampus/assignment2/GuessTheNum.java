@@ -11,8 +11,6 @@ public class GuessTheNum {
 		Random random = new Random();
 		Integer theRandomNumber = random.nextInt(100) + 1;
 
-		System.out.println(theRandomNumber);
-
 		System.out.println("Pick a number between 1 and 100: ");
 		gameStart(theRandomNumber, scanner);
 
@@ -34,7 +32,7 @@ public class GuessTheNum {
 				System.out.println("That guess is out of bounds, try again: ");
 				guess = chooseNum(scanner);
 			} else if (turns == 1) {
-				System.out.println("The answer was " + answer + ". Better luck next time!");
+				System.out.println("Too many failed login attempts, you are now locked out.");
 				return 0;
 			} else if (guess < answer) {
 				System.out.println("Please pick a higher number...");
